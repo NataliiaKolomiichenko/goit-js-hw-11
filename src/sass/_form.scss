@@ -1,0 +1,45 @@
+img {
+  display: block;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  background-color: #0e1f8c;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.gallery {
+  max-width: 1600px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid #eeeeee;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12),
+      0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 4px 6px 0px rgba(0, 0, 0, 0.16);
+}
+
+.info-item > span {
+  display: block;
+  text-align: center;
+}
+
+.load-more {
+  margin: 5px auto;
+  display: block;
+}
+
+.is-hidden {
+  display: none;
+}
+
+
