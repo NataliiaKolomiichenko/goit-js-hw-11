@@ -23,13 +23,17 @@ async function onSearch(event) {
     const imageSearchName = searchQuery.value;
 
     clearListItems();
-    refs.loadMoreBtn.classList.toggle('is-hidden');
 
     newApiService.query = imageSearchName;
     newApiService.resetPage();
 
     try {
-        const items = await newApiService.fetchImage()
+        const items = await newApiService.fetchImage();
+        if (items.totalHits > newApiService.per_page) {
+            refs.loadMoreBtn.classList.remove('is-hidden');
+        } else {
+            refs.loadMoreBtn.classList.add('is-hidden');
+        };
         return addedFirstItems(items);
     } catch (error) {
         console.log(error)
